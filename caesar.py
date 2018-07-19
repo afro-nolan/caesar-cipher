@@ -4,6 +4,9 @@ n = 13
 lower = "abcdefghijklmnopqrstuvwxyz"
 upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+print("Enter text to be encrypted: ")
+print("Prest ctrl + d when complete")
+
 src = lower + upper
 dst = lower[n:] + lower[:n] + upper[n:] + upper[:n]
 
@@ -23,5 +26,7 @@ while i < len(message):
     else:
         output.append(message[i])
     i = i + 1
-    
-sys.stdout.write("".join(output))
+  
+
+text = ["Encrypted text: ", "".join(output)]  
+sys.stdout.write("".join(text))
